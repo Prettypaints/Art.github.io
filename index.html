@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/counter.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/> 
+    Note: for icons-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pretty Paints</title>
+</head>
+<body>
+  <bg id="bgVid">
+    <video autoplay muted loop id="myVideo">
+        <source src="Video/backgroundVideo.mp4" type="video/mp4">
+      </video> 
+  </bg>
+  
+  <div class="contentContainer">
+    <div id="logo1" class="bounce-in-bck">
+     <a href="https://www.instagram.com/pretty_paints._/" target="_blank" > <img src=Logos/preview.jpg class='logo'></a>
+    </div>
+    
+    <div id="clockdiv" class="swing-in-top-fwd">
+        <div id='first'>
+          <span class="days"></span>
+          <div class="smalltext">Days</div>
+        </div>
+        <div>
+          <span class="hours"></span>
+          <div class="smalltext">Hours</div>
+        </div>
+        <div>
+          <span class="minutes"></span>
+          <div class="smalltext">Minutes</div>
+        </div>
+        <div>
+          <span class="seconds"></span>
+          <div class="smalltext">Seconds</div>
+        </div>
+     </div>
+
+  </div>
+
+
+
+<footer>
+  <!-- <div class="social">
+    <ul>
+      <li class='socialitems'><a href="#"><i class="fab fa-instagram"></i></a></li>
+      <li class='socialitems'><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+    </ul> note: for logo addition
+  </div> -->
+  <div class="outerfooter">
+   <p>&copy; 2020 Pretty Paints  All rights Reserved</p>
+  </div>
+</footer>   
+   
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="javascript/countdown.js"></script>
+    <script>
+      $('#clockdiv').countdown('2021/1/1',function(event){
+        var $this = $(this).html(event.strftime(''
+        +'<div id="first"><span>%D</span><div class="smalltext">Days</div></div>'
+        +'<div><span>%H</span><div class="smalltext">Hours</div></div>'
+        +'<div><span>%M</span><div class="smalltext">Minutes</div></div>'
+        +'<div><span>%S</span><div class="smalltext">Seconds</div></div>'
+        ))
+      })
+    </script>
+</body>
+</html>
+
+
+
